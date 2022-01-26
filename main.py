@@ -77,4 +77,4 @@ while running:
     enemy(enemyX, enemyY)
     pygame.display.update()  # need this to appear the updates
 
-    print("Cute ko.")
+    print("kwek kwek and isaw.")
