@@ -77,4 +77,4 @@ while running:
     enemy(enemyX, enemyY)
     pygame.display.update()  # need this to appear the updates
 
-    print("shh")
+    print("hello?")
