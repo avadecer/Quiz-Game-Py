@@ -4,18 +4,18 @@ import random
 
 root = tk.Tk()
 root.title("Device Security Quiz")
-root.geometry("600x600")
+root.geometry("620x600")
 root.config(background="#fff292")
 
 questions = [
-    "Below are steps in scanning antivirus. \nRearrange them in the correct sequence. \n\n a. Scan the selected file \n b. Choose an antivirus program \n c. Wait While the program is scanning and the result is produced \n d. Select the file that need to be scanned",
+    "Below are steps in scanning antivirus. \nRearrange them in the correct sequence. \n\n a. Scan the selected file \n b. Choose an antivirus program \n c. Wait While the program is scanning \nand the result is produced \n d. Select the file that need to be scanned",
     "How often should antivirus software be updated \n(the best way to protect computers?",
     "The #1 thing you can do to avoid malware is: ",
     "In the address portion of a website, what prefix \nindicates your communications are being encrypted during transit.",
     "How does identity theft cause problems for online users?",
     "What wouldn't you do if you know your computer is \nsuspect by malware?",
-    "The mouse on your computer screen starts to move around \non its own and click on things on your desktop. What do you do?",
-    "It is a type of malicious software that disguises itself \nas a legitimate file or program"
+    "The mouse on your computer screen starts to move around on its own and click on things on your desktop. What do you do?",
+    "It is a type of malicious software that disguises itself as a legitimate file or program"
 ]
 
 answers = [["d-b-a-c",
@@ -118,8 +118,8 @@ def startquiz():
     global lblQuestion, r1, r2, r3, r4
 
     greeting = tk.Label(text="Device Security Quiz",
-                        foreground="#E3170A",
-                        background="#FCF6B1",
+                        foreground="#ffffff",
+                        background="#E03616",
                         width=70,
                         font=("Consolas", 20)
                         )
@@ -128,9 +128,9 @@ def startquiz():
     lblQuestion = Label(
         root,
         text=questions[indexes[0]],
-        foreground="#ffffff",
-        background="#E03616",
-        font=("Consolas", 12),
+        foreground="#E03616",
+        background="#ffffff",
+        font=("Consolas", 16),
         justify="center",
         wraplength=650
     )
@@ -143,7 +143,7 @@ def startquiz():
     r1 = Radiobutton(
         root,
         text=answers[indexes[0]][0],
-        font=("Consolas", 11),
+        font=("Consolas", 12),
         bg="#FCF6B1",
         value=0,
         variable=radiovar,
@@ -154,7 +154,7 @@ def startquiz():
     r2 = Radiobutton(
         root,
         text=answers[indexes[0]][1],
-        font=("Consolas", 11),
+        font=("Consolas", 12),
         bg="#FCF6B1",
         value=1,
         variable=radiovar,
@@ -165,7 +165,7 @@ def startquiz():
     r3 = Radiobutton(
         root,
         text=answers[indexes[0]][2],
-        font=("Consolas", 11),
+        font=("Consolas", 12),
         bg="#FCF6B1",
         value=2,
         variable=radiovar,
@@ -176,7 +176,7 @@ def startquiz():
     r4 = Radiobutton(
         root,
         text=answers[indexes[0]][3],
-        font=("Consolas", 11),
+        font=("Consolas", 12),
         bg="#FCF6B1",
         value=3,
         variable=radiovar,
