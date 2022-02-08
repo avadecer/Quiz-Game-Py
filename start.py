@@ -149,7 +149,7 @@ def startquiz():
         variable=radiovar,
         command=selected
     )
-    r1.pack()
+    r1.pack(pady=(0, 20))
 
     r2 = Radiobutton(
         root,
@@ -160,7 +160,7 @@ def startquiz():
         variable=radiovar,
         command=selected
     )
-    r2.pack()
+    r2.pack(pady=(0, 20))
 
     r3 = Radiobutton(
         root,
@@ -171,7 +171,7 @@ def startquiz():
         variable=radiovar,
         command=selected
     )
-    r3.pack()
+    r3.pack(pady=(0, 20))
 
     r4 = Radiobutton(
         root,
@@ -182,7 +182,7 @@ def startquiz():
         variable=radiovar,
         command=selected
     )
-    r4.pack()
+    r4.pack(pady=(0, 20))
 
 
 def clickStart():
