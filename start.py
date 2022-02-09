@@ -4,7 +4,7 @@ import random
 
 root = tk.Tk()
 root.title("Device Security Quiz")
-root.geometry("620x600")
+root.geometry("700x600")
 root.config(background="#fff292")
 
 questions = [
@@ -15,7 +15,14 @@ questions = [
     "How does identity theft cause problems for online users?",
     "What wouldn't you do if you know your computer is \nsuspect by malware?",
     "The mouse on your computer screen starts to move around on its own and click on things on your desktop. What do you do?",
-    "It is a type of malicious software that disguises itself as a legitimate file or program"
+    "It is a type of malicious software that disguises itself as a legitimate file or program",
+    "It is a type of malware that restricts access to your own files. Often, payment is required for the access to be returned",
+    "Which of the following is an example of a “phishing” attack?",
+    "Which of the following four passwords is the most secure?",
+    "What kind of cybersecurity risks can be minimized by using a Virtual Private Network (VPN)?",
+    "On most home computers, how often should you update your operating system and security software?",
+    "It is a malicious software that replicate themselves over and over to deplete system resources",
+    "How can you tell if a website encrypts its traffic?"
 ]
 
 answers = [["d-b-a-c",
@@ -49,16 +56,44 @@ answers = [["d-b-a-c",
            ["Trojan Horse",
             "Worms",
             "Spyware",
-            "Ransomware"]]
+            "Ransomware"],
+           ["Trojan Horse",
+            "Worms",
+            "Spyware",
+            "Ransomware"],
+           ["Sending someone an email that contains a malicious link that is \ndisguised to look like an email from someone the person knows",
+            "Creating a fake website that looks nearly identical to a real website \nin order to trick users into entering their login information",
+            "Sending someone a text message that contains a malicious link that is \ndisguised to look like a notification that the person has won a contest",
+            "All of the above"],
+           ["WTh!5Z",
+            "123456",
+            "into*48",
+            "Ball123"],
+           ["Use of insecure Wi-Fi networks",
+            "De-anonymization by network operators",
+            "Key-logging",
+            "Phishing attacks"],
+           ["Monthly",
+            "You don't need to update your system",
+            "Three times a week",
+            "At least once a week"],
+           ["Trojan Horse",
+            "Worms",
+            "Spyware",
+            "Ransomware"],
+           ["Google it",
+            "Look for the lock symbol in a URL",
+            "All websites encrypt their traffic",
+            "Encrypted sites take longer to load"]]
 
-cor_answers = [1, 1, 1, 1, 3, 1, 0, 1, 3, 3]
+cor_answers = [1, 1, 1, 1, 3, 1, 0, 1, 3, 3, 0, 0, 0, 1, 1]
 user_answer = []
 
 indexes=[]
 def gen():
     global indexes
-    while (len(indexes) < 8):
-        x = random.randint(0, 7)
+    while (len(indexes) < 15):
+        x = random.randint(0, 14)
         if x in indexes:
             continue
         else:
@@ -100,7 +135,7 @@ def selected():
     x = radiovar.get()
     user_answer.append(x)
     radiovar.set(-1)
-    if ques < 8:
+    if ques < 15:
         lblQuestion.config(text=questions[indexes[ques]])
         r1['text'] = answers[indexes[ques]][0]
         r2['text'] = answers[indexes[ques]][1]
