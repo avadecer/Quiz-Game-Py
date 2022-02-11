@@ -7,71 +7,157 @@ import tkinter.font as font
 
 root = tk.Tk()
 root.title("Device Security Quiz")
-root.geometry("600x600")
+root.geometry("700x600")
 root.config(background="#fff292")
+
 
 def center_window_on_screen():
     x_cord = int((screen_width / 2) - (width / 2))
     y_cord = int((screen_height / 2) - (height / 2))
     root.geometry("{}x{}+{}+{}".format(width, height, x_cord, y_cord))
 
+
 def next_to_Q2():
     frame1.forget()
     frame2.pack(fill='both', expand=1)
+
 
 def back_to_Q1():
     frame1.pack(fill='both', expand=1)
     frame2.forget()
 
+
 def next_to_Q3():
     frame3.pack(fill='both', expand=1)
     frame2.forget()
+
 
 def back_to_Q2():
     frame2.pack(fill='both', expand=1)
     frame3.forget()
 
+
+def next_to_Q4():
+    frame4.pack(fill='both', expand=1)
+    frame3.forget()
+
+
+def back_to_Q3():
+    frame3.pack(fill='both', expand=1)
+    frame4.forget()
+
+
+def next_to_Q5():
+    frame5.pack(fill='both', expand=1)
+    frame4.forget()
+
+
+def back_to_Q4():
+    frame4.pack(fill='both', expand=1)
+    frame5.forget()
+
+
+def next_to_Q6():
+    frame6.pack(fill='both', expand=1)
+    frame5.forget()
+
+
+def back_to_Q5():
+    frame5.pack(fill='both', expand=1)
+    frame6.forget()
+
+
+def next_to_Q7():
+    frame7.pack(fill='both', expand=1)
+    frame6.forget()
+
+
+def back_to_Q6():
+    frame6.pack(fill='both', expand=1)
+    frame7.forget()
+
+
+def next_to_Q8():
+    frame8.pack(fill='both', expand=1)
+    frame7.forget()
+
+
+def back_to_Q7():
+    frame7.pack(fill='both', expand=1)
+    frame8.forget()
+
+
+def next_to_Q9():
+    frame9.pack(fill='both', expand=1)
+    frame8.forget()
+
+
+def back_to_Q8():
+    frame8.pack(fill='both', expand=1)
+    frame9.forget()
+
+
+def next_to_Q10():
+    frame10.pack(fill='both', expand=1)
+    frame9.forget()
+
+
+def back_to_Q9():
+    frame9.pack(fill='both', expand=1)
+    frame10.forget()
+
+
 def next_to_Q11():
     frame11.pack(fill='both', expand=1)
     frame10.forget()
+
 
 def back_to_Q10():
     frame10.pack(fill='both', expand=1)
     frame11.forget()
 
+
 def next_to_Q12():
     frame12.pack(fill='both', expand=1)
     frame11.forget()
+
 
 def back_to_Q11():
     frame11.pack(fill='both', expand=1)
     frame12.forget()
 
+
 def next_to_Q13():
     frame13.pack(fill='both', expand=1)
     frame12.forget()
+
 
 def back_to_Q12():
     frame12.pack(fill='both', expand=1)
     frame13.forget()
 
+
 def next_to_Q14():
     frame14.pack(fill='both', expand=1)
     frame13.forget()
+
 
 def back_to_Q13():
     frame13.pack(fill='both', expand=1)
     frame14.forget()
 
+
 def next_to_Q15():
     frame15.pack(fill='both', expand=1)
     frame14.forget()
+
 
 def back_to_Q14():
     frame14.pack(fill='both', expand=1)
     frame15.forget()
 
-width, height = 900, 500
+
+width, height = 700, 600
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 center_window_on_screen()
@@ -84,6 +170,24 @@ frame2.configure(bg='light yellow')
 
 frame3 = tk.Frame(root)
 frame3.configure(bg='light yellow')
+
+frame4 = tk.Frame(root)
+frame4.configure(bg='light yellow')
+
+frame5 = tk.Frame(root)
+frame5.configure(bg='light yellow')
+
+frame6 = tk.Frame(root)
+frame6.configure(bg='light yellow')
+
+frame7 = tk.Frame(root)
+frame7.configure(bg='light yellow')
+
+frame8 = tk.Frame(root)
+frame8.configure(bg='light yellow')
+
+frame9 = tk.Frame(root)
+frame9.configure(bg='light yellow')
 
 frame10 = tk.Frame(root)
 frame10.configure(bg='light yellow')
@@ -106,89 +210,169 @@ frame15.configure(bg='light yellow')
 font_large = font.Font(family='Georgia', size='15', weight='bold')
 font_small = font.Font(family='Georgia', size='12')
 
-def q1Rigth():
-    tk.Label(frame1, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q1Wrong():
-    tk.Label(frame1, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q2Rigth():
-    tk.Label(frame2, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q2Wrong():
-    tk.Label(frame2, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q3Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q3Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q10Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q10Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q11Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q11Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q12Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q12Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q13Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q13Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q14Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q14Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q15Rigth():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=380, y=400)
-def q15Wrong():
-    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=380, y=400)
 
+def q1Right():
+    tk.Label(frame1, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q1Wrong():
+    tk.Label(frame1, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q2Right():
+    tk.Label(frame2, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q2Wrong():
+    tk.Label(frame2, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q3Right():
+    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q3Wrong():
+    tk.Label(frame3, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q4Right():
+    tk.Label(frame4, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q4Wrong():
+    tk.Label(frame4, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q5Right():
+    tk.Label(frame5, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q5Wrong():
+    tk.Label(frame5, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q6Right():
+    tk.Label(frame6, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q6Wrong():
+    tk.Label(frame6, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q7Right():
+    tk.Label(frame7, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q7Wrong():
+    tk.Label(frame7, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q8Right():
+    tk.Label(frame8, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q8Wrong():
+    tk.Label(frame8, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q9Right():
+    tk.Label(frame9, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q9Wrong():
+    tk.Label(frame9, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q10Right():
+    tk.Label(frame10, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q10Wrong():
+    tk.Label(frame10, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q11Right():
+    tk.Label(frame11, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q11Wrong():
+    tk.Label(frame11, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q12Right():
+    tk.Label(frame12, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q12Wrong():
+    tk.Label(frame12, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q13Right():
+    tk.Label(frame13, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q13Wrong():
+    tk.Label(frame13, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q14Right():
+    tk.Label(frame14, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q14Wrong():
+    tk.Label(frame14, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q15Right():
+    tk.Label(frame15, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+def q15Wrong():
+    tk.Label(frame15, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
 
 
 def startquiz():
-
     question1 = tk.Label(frame1, text='Below are steps in scanning antivirus.'
-                                      ' Rearrange them in the correct sequence. \n\n a. Scan the selected file \n '
+                                      ' \nRearrange them in the correct sequence. \n\n a. Scan the selected file \n '
                                       'b. Choose an antivirus program \n c. Wait While the program is scanning and the'
                                       'result is produced \n d. Select the file that need to be scanned',
                          font=font_large, bg='light yellow')
     q1A = tk.Button(frame1, text='A. d-b-a-c', font=font_large, bg='#FCF6B1', command=q1Wrong)
-    q1B = tk.Button(frame1, text='B. b-d-a-c', font=font_large, bg='#FCF6B1', command=q1Rigth)
+    q1B = tk.Button(frame1, text='B. b-d-a-c', font=font_large, bg='#FCF6B1', command=q1Right)
     q1C = tk.Button(frame1, text='C. a-c-b-d', font=font_large, bg='#FCF6B1', command=q1Wrong)
     q1D = tk.Button(frame1, text='D. c-a-d-b', font=font_large, bg='#FCF6B1', command=q1Wrong)
 
     question1.pack(pady=20)
-    q1A.place(x=200, y=200)
-    q1B.place(x=200, y=300)
-    q1C.place(x=550, y=200)
-    q1D.place(x=550, y=300)
+    q1A.place(x=120, y=250)
+    q1B.place(x=120, y=350)
+    q1C.place(x=470, y=250)
+    q1D.place(x=470, y=350)
 
     btnNextQ2 = tk.Button(frame1, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q2)
 
-    btnNextQ2.place(x=750, y=400)
+    btnNextQ2.place(x=600, y=500)
 
     question2 = tk.Label(frame2,
-                         text='How often should antivirus software be updated (the best way to protect computers)?',
+                         text='How often should antivirus software be \nupdated (the best way to protect computers)?',
                          font=font_large, bg='light yellow')
-
-    q2A = tk.Button(frame2, text='A. Monthly', font=font_large, bg='#FCF6B1', command=q2Rigth)
+    q2A = tk.Button(frame2, text='A. Monthly', font=font_large, bg='#FCF6B1', command=q2Right)
     q2B = tk.Button(frame2, text='B. Every 3 months', font=font_large, bg='#FCF6B1', command=q2Wrong)
     q2C = tk.Button(frame2, text='C. Annually', font=font_large, bg='#FCF6B1', command=q2Wrong)
     q2D = tk.Button(frame2, text='D. Never', font=font_large, bg='#FCF6B1', command=q2Wrong)
 
     question2.pack(pady=20)
-    q2A.place(x=200, y=100)
-    q2B.place(x=200, y=200)
-    q2C.place(x=550, y=100)
-    q2D.place(x=550, y=200)
+    q2A.place(x=120, y=150)
+    q2B.place(x=120, y=250)
+    q2C.place(x=470, y=150)
+    q2D.place(x=470, y=250)
 
     btnBackQ1 = tk.Button(frame2, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q1)
-    btnBackQ1.place(x=100, y=400)
+    btnBackQ1.place(x=50, y=500)
 
     question3 = tk.Label(frame3, text='The #1 thing you can do to avoid malware is:', font=font_large,
                          bg='light yellow')
     q3A = tk.Button(frame3, text='A. Install antivirus software and keep it updated', font=font_large, bg='#FCF6B1',
-                    command=q3Rigth)
+                    command=q3Right)
     q3B = tk.Button(frame3, text='B. Do not open email attachments', font=font_large, bg='#FCF6B1', command=q3Wrong)
     q3C = tk.Button(frame3, text='C. Do not download anything from the web.', font=font_large, bg='#FCF6B1',
                     command=q3Wrong)
@@ -201,19 +385,253 @@ def startquiz():
     q3D.pack(pady=20)
 
     btnNextQ3 = tk.Button(frame2, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q3)
-    btnNextQ3.place(x=750, y=400)
+    btnNextQ3.place(x=600, y=500)
 
     btnBackQ2 = tk.Button(frame3, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q2)
-    btnBackQ2.place(x=100, y=400)
+    btnBackQ2.place(x=50, y=500)
 
-    question15 = tk.Label(frame15, text='How can you tell if a website encrypts its traffic?', font=font_large,
+    question4 = tk.Label(frame4,
+                         text='In the address portion of a website, what prefix indicates your \ncommunications are being encrypted during transit',
+                         font=font_large, bg='light yellow')
+    q4A = tk.Button(frame4, text='A. Http://', font=font_large, bg='#FCF6B1', command=q4Wrong)
+    q4B = tk.Button(frame4, text='B. Https://', font=font_large, bg='#FCF6B1', command=q4Right)
+    q4C = tk.Button(frame4, text='C. Ftp://', font=font_large, bg='#FCF6B1', command=q4Wrong)
+    q4D = tk.Button(frame4, text='D. Tcp://', font=font_large, bg='#FCF6B1', command=q4Wrong)
+
+    question4.pack(pady=20)
+    q4A.place(x=120, y=150)
+    q4B.place(x=120, y=250)
+    q4C.place(x=470, y=150)
+    q4D.place(x=470, y=250)
+
+    btnNextQ4 = tk.Button(frame3, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q4)
+    btnNextQ4.place(x=600, y=500)
+
+    btnBackQ3 = tk.Button(frame4, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q3)
+    btnBackQ3.place(x=50, y=500)
+
+    question5 = tk.Label(frame5, text='How does identity theft cause problems for online users?', font=font_large,
                          bg='light yellow')
-    q15A = tk.Button(frame15, text='A. Google it', font=font_large, bg='#FCF6B1',
-                    command=q15Wrong)
-    q15B = tk.Button(frame15, text='B. Look for the lock symbol in a URL', font=font_large, bg='#FCF6B1', command=q15Rigth)
+    q5A = tk.Button(frame5, text='A. Steals social security', font=font_large, bg='#FCF6B1', command=q5Wrong)
+    q5B = tk.Button(frame5, text='B. Locates where you live and all information', font=font_large, bg='#FCF6B1',
+                    command=q5Wrong)
+    q5C = tk.Button(frame5, text='C. Steals bank information', font=font_large, bg='#FCF6B1', command=q5Wrong)
+    q5D = tk.Button(frame5, text='D. All of the above', font=font_large, bg='#FCF6B1', command=q5Right)
+
+    question5.pack(pady=20)
+    q5A.pack(pady=20)
+    q5B.pack(pady=20)
+    q5C.pack(pady=20)
+    q5D.pack(pady=20)
+
+    btnNextQ5 = tk.Button(frame4, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q5)
+    btnNextQ5.place(x=600, y=500)
+
+    btnBackQ4 = tk.Button(frame5, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q4)
+    btnBackQ4.place(x=50, y=500)
+
+    question6 = tk.Label(frame6, text='What would you not do if you know your computer \nis suspect by malware?',
+                         font=font_large, bg='light yellow')
+    q6A = tk.Button(frame6,
+                    text='A. Stop doing any online activity that requires your \nusername, password, and other personal information.',
+                    font=font_large, bg='#FCF6B1', command=q6Wrong)
+    q6B = tk.Button(frame6, text='B. Keep shopping, banking, using every account \nabout online activity.',
+                    font=font_large, bg='#FCF6B1', command=q6Right)
+    q6C = tk.Button(frame6,
+                    text='C.Try to use anti-virus and anti-spyware software, \nand a firewall to defend the malware',
+                    font=font_large, bg='#FCF6B1', command=q6Wrong)
+    q6D = tk.Button(frame6, text='D. Try to call a professional help', font=font_large, bg='#FCF6B1', command=q6Wrong)
+
+    question6.pack(pady=20)
+    q6A.pack(pady=20)
+    q6B.pack(pady=20)
+    q6C.pack(pady=20)
+    q6D.pack(pady=20)
+
+    btnNextQ6 = tk.Button(frame5, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q6)
+    btnNextQ6.place(x=600, y=500)
+
+    btnBackQ5 = tk.Button(frame6, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q5)
+    btnBackQ5.place(x=50, y=500)
+
+    question7 = tk.Label(frame7,
+                         text='The mouse on your computer screen starts to move \naround on its own and click on things on \nyour desktop. What do you do?',
+                         font=font_large, bg='light yellow')
+    q7A = tk.Button(frame7, text='A. Disconnect your computer from the network', font=font_large, bg='#FCF6B1',
+                    command=q7Right)
+    q7B = tk.Button(frame7, text='B. Unplug your mouse', font=font_large, bg='#FCF6B1', command=q7Wrong)
+    q7C = tk.Button(frame7, text='C. Turn your computer off', font=font_large, bg='#FCF6B1', command=q7Wrong)
+    q7D = tk.Button(frame7, text='D. Don’t do anything', font=font_large, bg='#FCF6B1', command=q7Wrong)
+
+    question7.pack(pady=20)
+    q7A.pack(pady=20)
+    q7B.pack(pady=20)
+    q7C.pack(pady=20)
+    q7D.pack(pady=20)
+
+    btnNextQ7 = tk.Button(frame6, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q7)
+    btnNextQ7.place(x=600, y=500)
+
+    btnBackQ6 = tk.Button(frame7, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q6)
+    btnBackQ6.place(x=50, y=500)
+
+    question8 = tk.Label(frame8,
+                         text='It is a type of malicious software that disguises \nitself as a legitimate file or program',
+                         font=font_large, bg='light yellow')
+    q8A = tk.Button(frame8, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q8Right)
+    q8B = tk.Button(frame8, text='B. Worms', font=font_large, bg='#FCF6B1', command=q8Wrong)
+    q8C = tk.Button(frame8, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q8Wrong)
+    q8D = tk.Button(frame8, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q8Wrong)
+
+    question8.pack(pady=20)
+    q8A.place(x=80, y=180)
+    q8B.place(x=80, y=280)
+    q8C.place(x=430, y=180)
+    q8D.place(x=430, y=280)
+
+    btnNextQ8 = tk.Button(frame7, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q8)
+    btnNextQ8.place(x=600, y=500)
+
+    btnBackQ7 = tk.Button(frame8, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q7)
+    btnBackQ7.place(x=50, y=500)
+
+    question9 = tk.Label(frame9,
+                         text='It is a type of malware that restricts access to your \nown files. Often, payment is required \nfor the access to be returned',
+                         font=font_large, bg='light yellow')
+    q9A = tk.Button(frame9, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q9Wrong)
+    q9B = tk.Button(frame9, text='B. Worms', font=font_large, bg='#FCF6B1', command=q9Wrong)
+    q9C = tk.Button(frame9, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q9Wrong)
+    q9D = tk.Button(frame9, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q9Right)
+
+    question9.pack(pady=20)
+    q9A.place(x=80, y=180)
+    q9B.place(x=80, y=280)
+    q9C.place(x=430, y=180)
+    q9D.place(x=430, y=280)
+
+    btnNextQ9 = tk.Button(frame8, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q9)
+    btnNextQ9.place(x=600, y=500)
+
+    btnBackQ8 = tk.Button(frame9, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q8)
+    btnBackQ8.place(x=50, y=500)
+
+    question10 = tk.Label(frame10, text='Which of the following is an example of a “phishing” attack?', font=font_large,
+                          bg='light yellow')
+    q10A = tk.Button(frame10,
+                     text='A. Sending someone an email that contains a malicious link \nthat is disguised to look like '
+                          'an email from \nsomeone the person knows',
+                     font=14, bg='#FCF6B1', command=q10Wrong)
+    q10B = tk.Button(frame10,
+                     text='B. Creating a fake website that looks nearly identical \nto a real website in order to trick users \ninto entering their login information',
+                     font=14, bg='#FCF6B1', command=q10Wrong)
+    q10C = tk.Button(frame10,
+                     text='C. Sending someone a text message that contains a \nmalicious link that is disguised to look like a notification '
+                          '\nthat the person has won a contest',
+                     font=14, bg='#FCF6B1', command=q10Wrong)
+    q10D = tk.Button(frame10, text='D. All of the above', font=14, bg='#FCF6B1', command=q10Right)
+
+    question10.pack(pady=20)
+    q10A.pack(pady=15)
+    q10B.pack(pady=15)
+    q10C.pack(pady=15)
+    q10D.pack(pady=15)
+
+    btnNextQ10 = tk.Button(frame9, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q10)
+    btnNextQ10.place(x=600, y=500)
+
+    btnBackQ10 = tk.Button(frame10, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q9)
+    btnBackQ10.place(x=50, y=500)
+
+    question11 = tk.Label(frame11, text='Which of the following four passwords is the most secure?', font=font_large,
+                          bg='light yellow')
+    q11A = tk.Button(frame11, text='A. WTh!5Z', font=font_large, bg='#FCF6B1', command=q11Right)
+    q11B = tk.Button(frame11, text='B. 123456', font=font_large, bg='#FCF6B1', command=q11Wrong)
+    q11C = tk.Button(frame11, text='C. into*48', font=font_large, bg='#FCF6B1', command=q11Wrong)
+    q11D = tk.Button(frame11, text='D. Ball123', font=font_large, bg='#FCF6B1', command=q11Wrong)
+
+    question11.pack(pady=20)
+    q11A.place(x=120, y=150)
+    q11B.place(x=120, y=250)
+    q11C.place(x=470, y=150)
+    q11D.place(x=470, y=250)
+
+    btnNextQ11 = tk.Button(frame10, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q11)
+    btnNextQ11.place(x=600, y=500)
+
+    btnBackQ11 = tk.Button(frame11, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q10)
+    btnBackQ11.place(x=50, y=500)
+
+    question12 = tk.Label(frame12, text='What kind of cybersecurity risks can be minimized by '
+                                        '\nusing a Virtual Private Network (VPN)?',
+                          font=font_large, bg='light yellow')
+    q12A = tk.Button(frame12, text='A. Use of insecure Wi-Fi networks', font=font_large, bg='#FCF6B1', command=q12Right)
+    q12B = tk.Button(frame12, text='B. De-anonymization by network operatorss', font=font_large, bg='#FCF6B1',
+                     command=q12Wrong)
+    q12C = tk.Button(frame12, text='C. Key-logging', font=font_large, bg='#FCF6B1', command=q12Wrong)
+    q12D = tk.Button(frame12, text='D. Phishing attacks', font=font_large, bg='#FCF6B1', command=q12Wrong)
+
+    question12.pack(pady=20)
+    q12A.pack(pady=20)
+    q12B.pack(pady=20)
+    q12C.pack(pady=20)
+    q12D.pack(pady=20)
+
+    btnNextQ12 = tk.Button(frame11, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q12)
+    btnNextQ12.place(x=600, y=500)
+
+    btnBackQ11 = tk.Button(frame12, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q11)
+    btnBackQ11.place(x=50, y=500)
+
+    question13 = tk.Label(frame13,
+                          text='On most home computers, how often should you update \nyour operating system and security software?',
+                          font=font_large, bg='light yellow')
+    q13A = tk.Button(frame13, text='A. Monthly', font=font_large, bg='#FCF6B1', command=q13Right)
+    q13B = tk.Button(frame13, text='B. You do not need to update your system', font=font_large, bg='#FCF6B1',
+                     command=q13Wrong)
+    q13C = tk.Button(frame13, text='C. Three times a week', font=font_large, bg='#FCF6B1', command=q13Wrong)
+    q13D = tk.Button(frame13, text='D. At least once a week', font=font_large, bg='#FCF6B1', command=q13Wrong)
+
+    question13.pack(pady=20)
+    q13A.pack(pady=20)
+    q13B.pack(pady=20)
+    q13C.pack(pady=20)
+    q13D.pack(pady=20)
+
+    btnNextQ13 = tk.Button(frame12, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q13)
+    btnNextQ13.place(x=600, y=500)
+
+    btnBackQ12 = tk.Button(frame13, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q12)
+    btnBackQ12.place(x=50, y=500)
+
+    question14 = tk.Label(frame14,
+                          text=' It is a malicious software that replicate themselves \nover and over to deplete system resources',
+                          font=font_large, bg='light yellow')
+    q14A = tk.Button(frame14, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q14Wrong)
+    q14B = tk.Button(frame14, text='B. Worms', font=font_large, bg='#FCF6B1', command=q14Right)
+    q14C = tk.Button(frame14, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q14Wrong)
+    q14D = tk.Button(frame14, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q14Wrong)
+
+    question14.pack(pady=20)
+    q14A.place(x=80, y=180)
+    q14B.place(x=80, y=280)
+    q14C.place(x=430, y=180)
+    q14D.place(x=430, y=280)
+
+    btnNextQ14 = tk.Button(frame13, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q14)
+    btnNextQ14.place(x=600, y=500)
+
+    btnBackQ13 = tk.Button(frame14, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q13)
+    btnBackQ13.place(x=50, y=500)
+
+    question15 = tk.Label(frame15, text=' How can you tell if a website encrypts its traffic?', font=font_large,
+                          bg='light yellow')
+    q15A = tk.Button(frame15, text='A. Google it', font=font_large, bg='#FCF6B1', command=q15Wrong)
+    q15B = tk.Button(frame15, text='B. Look for the lock symbol in a URL', font=font_large, bg='#FCF6B1',
+                     command=q15Right)
     q15C = tk.Button(frame15, text='C. All websites encrypt their traffic', font=font_large, bg='#FCF6B1',
-                    command=q15Wrong)
-    q15D = tk.Button(frame15, text='D. Encrypted sites take longer to load', font=font_large, bg='#FCF6B1', command=q15Wrong)
+                     command=q15Wrong)
+    q15D = tk.Button(frame15, text='D. Encrypted sites take longer to load', font=font_large, bg='#FCF6B1',
+                     command=q15Wrong)
 
     question15.pack(pady=20)
     q15A.pack(pady=20)
@@ -221,17 +639,21 @@ def startquiz():
     q15C.pack(pady=20)
     q15D.pack(pady=20)
 
-    btnBackQ14 = tk.Button(frame15, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q2)
-    btnBackQ14.place(x=100, y=400)
+    btnNextQ15 = tk.Button(frame14, text='NEXT', font=font_small, bg='#FCF6B1', command=next_to_Q15)
+    btnNextQ15.place(x=600, y=500)
+
+    btnBackQ14 = tk.Button(frame15, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q14)
+    btnBackQ14.place(x=50, y=500)
+
 
 def videoplayer():
     videoLabel = Label(
-    root,
-    text="Instructions: Click 'Load' to import the mp4 file. \nThen click 'Play' to learn the topic about Device Security. \nClick 'Start Quiz' to proceed.",
-    font=("Bahnschrift Light SemiCondensed", 18),
-    bg="#fff292",
-    fg="#3d261f",
-    justify="center")
+        root,
+        text="Instructions: Click 'Load' to import the mp4 file. \nThen click 'Play' to learn the topic about Device Security. \nClick 'Start Quiz' to proceed.",
+        font=("Bahnschrift Light SemiCondensed", 18),
+        bg="#fff292",
+        fg="#3d261f",
+        justify="center")
     videoLabel.pack(pady=5)
 
     def update_duration(event):
@@ -290,7 +712,6 @@ def videoplayer():
         progress_slider.destroy()
         start_quizBtn.destroy()
         startquiz()
-
 
     load_Btn = Button(
         root,
@@ -359,6 +780,7 @@ def clickStart():
     startButton.destroy()
     videoplayer()
 
+
 logo = PhotoImage(file="logo_brown.png")
 
 imageLabel = Label(
@@ -371,7 +793,7 @@ imageLabel.pack()
 welcomeLabel = Label(
     root,
     text="Welcome to\n" "Device Security Quiz",
-    font =("Bahnschrift SemiBold", 26),
+    font=("Bahnschrift SemiBold", 26),
     fg="#000000",
     background="#fff292",
 )
