@@ -9,6 +9,7 @@ root = tk.Tk()
 root.title("Device Security Quiz")
 root.geometry("700x600")
 root.config(background="#fff292")
+root.resizable(False, False)
 
 
 def center_window_on_screen():
@@ -157,6 +158,12 @@ def back_to_Q14():
     frame15.forget()
 
 
+def to_score():
+    frame16.pack(fill='both', expand=1)
+    frame15.forget()
+    scoreboard()
+
+
 width, height = 700, 600
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -207,12 +214,15 @@ frame14.configure(bg='light yellow')
 frame15 = tk.Frame(root)
 frame15.configure(bg='light yellow')
 
+frame16 = tk.Frame(root)
+frame16.configure(bg='light yellow')
+
 font_large = font.Font(family='Georgia', size='15', weight='bold')
 font_small = font.Font(family='Georgia', size='12')
 
 
 def q1Right():
-    tk.Label(frame1, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame1, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q1Wrong():
@@ -220,7 +230,7 @@ def q1Wrong():
 
 
 def q2Right():
-    tk.Label(frame2, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame2, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q2Wrong():
@@ -228,7 +238,7 @@ def q2Wrong():
 
 
 def q3Right():
-    tk.Label(frame3, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame3, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q3Wrong():
@@ -236,7 +246,7 @@ def q3Wrong():
 
 
 def q4Right():
-    tk.Label(frame4, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame4, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q4Wrong():
@@ -244,7 +254,7 @@ def q4Wrong():
 
 
 def q5Right():
-    tk.Label(frame5, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame5, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q5Wrong():
@@ -252,7 +262,7 @@ def q5Wrong():
 
 
 def q6Right():
-    tk.Label(frame6, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame6, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q6Wrong():
@@ -260,7 +270,7 @@ def q6Wrong():
 
 
 def q7Right():
-    tk.Label(frame7, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame7, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q7Wrong():
@@ -268,7 +278,7 @@ def q7Wrong():
 
 
 def q8Right():
-    tk.Label(frame8, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame8, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q8Wrong():
@@ -276,7 +286,7 @@ def q8Wrong():
 
 
 def q9Right():
-    tk.Label(frame9, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame9, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q9Wrong():
@@ -284,7 +294,7 @@ def q9Wrong():
 
 
 def q10Right():
-    tk.Label(frame10, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame10, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q10Wrong():
@@ -292,7 +302,7 @@ def q10Wrong():
 
 
 def q11Right():
-    tk.Label(frame11, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame11, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q11Wrong():
@@ -300,7 +310,7 @@ def q11Wrong():
 
 
 def q12Right():
-    tk.Label(frame12, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame12, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q12Wrong():
@@ -308,7 +318,7 @@ def q12Wrong():
 
 
 def q13Right():
-    tk.Label(frame13, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame13, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q13Wrong():
@@ -316,7 +326,7 @@ def q13Wrong():
 
 
 def q14Right():
-    tk.Label(frame14, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame14, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q14Wrong():
@@ -324,11 +334,49 @@ def q14Wrong():
 
 
 def q15Right():
-    tk.Label(frame15, text='  Correct  ', font=font_large, background='red', fg='white').place(x=300, y=500)
+    tk.Label(frame15, text='  Correct  ', font=font_large, background='#228B22', fg='white').place(x=300, y=500)
 
 
 def q15Wrong():
     tk.Label(frame15, text='Incorrect', font=font_large, background='red', fg='white').place(x=300, y=500)
+
+
+root.counter = 0
+
+
+def correct_button_clicked():
+    root.counter += 1
+
+
+def scoreboard():
+    lblhead = Label(root, text="Let's see how much you've got!", bg="#8B0000",
+                    fg="#ffffff", width=80, font=("Lucida Calligraphy Italic", 30))
+    lblhead.place(x=350, y=50, anchor="n")
+
+    score = Label(text="Your Score\n" + str(root.counter) + " / 15", font=("Aharoni", 30))
+    score.place(x=250, y=150)
+
+    if root.counter >= 11:
+        lblpass = Label(root, text="Great job!", bg="#A0522D",
+                        fg="#ffffff", width=20, font=("Impact", 30))
+        lblpass.place(x=350, y=400, anchor="s")
+
+    else:
+        lblfail = Label(root, text="Nice try!", bg="#A0522D",
+                        fg="#ffffff", width=20, font=("Impact", 30))
+        lblfail.place(x=350, y=400, anchor="s")
+
+    tryagain = Button(text="TRY AGAIN", font=font_large)
+    tryagain.place(x=690, y=500, anchor="se")
+
+    def proginfo():
+        prog = Label(root,
+                     text="People behind the program:\n \n Ann Vergie Adecer\nPatricia Andy Aquino\nMa. Carmela Bolante\nJonalee Lorie Naife\n Angelique Grace Quiñones",
+                     font=font_small, justify=LEFT)
+        prog.place(x=20, y=450)
+
+    info = Button(root, text="INFO", font=font_large, command=proginfo)
+    info.place(x=690, y=570, anchor="se")
 
 
 def startquiz():
@@ -337,10 +385,18 @@ def startquiz():
                                       'b. Choose an antivirus program \n c. Wait While the program is scanning and the'
                                       'result is produced \n d. Select the file that need to be scanned',
                          font=font_large, bg='light yellow')
-    q1A = tk.Button(frame1, text='A. d-b-a-c', font=font_large, bg='#FCF6B1', command=q1Wrong)
-    q1B = tk.Button(frame1, text='B. b-d-a-c', font=font_large, bg='#FCF6B1', command=q1Right)
-    q1C = tk.Button(frame1, text='C. a-c-b-d', font=font_large, bg='#FCF6B1', command=q1Wrong)
-    q1D = tk.Button(frame1, text='D. c-a-d-b', font=font_large, bg='#FCF6B1', command=q1Wrong)
+
+    def q1():
+        q1A['state'] = tk.DISABLED
+        q1B['state'] = tk.DISABLED
+        q1C['state'] = tk.DISABLED
+        q1D['state'] = tk.DISABLED
+
+    q1A = tk.Button(frame1, text='A. d-b-a-c', font=font_large, bg='#FCF6B1', command=lambda: [q1Wrong(), q1()])
+    q1B = tk.Button(frame1, text='B. b-d-a-c', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q1Right(), correct_button_clicked(), q1()])
+    q1C = tk.Button(frame1, text='C. a-c-b-d', font=font_large, bg='#FCF6B1', command=lambda: [q1Wrong(), q1()])
+    q1D = tk.Button(frame1, text='D. c-a-d-b', font=font_large, bg='#FCF6B1', command=lambda: [q1Wrong(), q1()])
 
     question1.pack(pady=20)
     q1A.place(x=120, y=250)
@@ -355,10 +411,18 @@ def startquiz():
     question2 = tk.Label(frame2,
                          text='How often should antivirus software be \nupdated (the best way to protect computers)?',
                          font=font_large, bg='light yellow')
-    q2A = tk.Button(frame2, text='A. Monthly', font=font_large, bg='#FCF6B1', command=q2Right)
-    q2B = tk.Button(frame2, text='B. Every 3 months', font=font_large, bg='#FCF6B1', command=q2Wrong)
-    q2C = tk.Button(frame2, text='C. Annually', font=font_large, bg='#FCF6B1', command=q2Wrong)
-    q2D = tk.Button(frame2, text='D. Never', font=font_large, bg='#FCF6B1', command=q2Wrong)
+
+    def q2():
+        q2A['state'] = tk.DISABLED
+        q2B['state'] = tk.DISABLED
+        q2C['state'] = tk.DISABLED
+        q2D['state'] = tk.DISABLED
+
+    q2A = tk.Button(frame2, text='A. Monthly', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q2Right(), correct_button_clicked(), q2()])
+    q2B = tk.Button(frame2, text='B. Every 3 months', font=font_large, bg='#FCF6B1', command=lambda: [q2Wrong(), q2()])
+    q2C = tk.Button(frame2, text='C. Annually', font=font_large, bg='#FCF6B1', command=lambda: [q2Wrong(), q2()])
+    q2D = tk.Button(frame2, text='D. Never', font=font_large, bg='#FCF6B1', command=lambda: [q2Wrong(), q2()])
 
     question2.pack(pady=20)
     q2A.place(x=120, y=150)
@@ -368,15 +432,23 @@ def startquiz():
 
     btnBackQ1 = tk.Button(frame2, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q1)
     btnBackQ1.place(x=50, y=500)
-
     question3 = tk.Label(frame3, text='The #1 thing you can do to avoid malware is:', font=font_large,
                          bg='light yellow')
+
+    def q3():
+        q3A['state'] = tk.DISABLED
+        q3B['state'] = tk.DISABLED
+        q3C['state'] = tk.DISABLED
+        q3D['state'] = tk.DISABLED
+
     q3A = tk.Button(frame3, text='A. Install antivirus software and keep it updated', font=font_large, bg='#FCF6B1',
-                    command=q3Right)
-    q3B = tk.Button(frame3, text='B. Do not open email attachments', font=font_large, bg='#FCF6B1', command=q3Wrong)
+                    command=lambda: [q3Right(), correct_button_clicked(), q3()])
+    q3B = tk.Button(frame3, text='B. Do not open email attachments', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q3Wrong(), q3()])
     q3C = tk.Button(frame3, text='C. Do not download anything from the web.', font=font_large, bg='#FCF6B1',
-                    command=q3Wrong)
-    q3D = tk.Button(frame3, text='D. Be friendly always', font=font_large, bg='#FCF6B1', command=q3Wrong)
+                    command=lambda: [q3Wrong(), q3()])
+    q3D = tk.Button(frame3, text='D. Be friendly always', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q3Wrong(), q3()])
 
     question3.pack(pady=20)
     q3A.pack(pady=20)
@@ -393,10 +465,18 @@ def startquiz():
     question4 = tk.Label(frame4,
                          text='In the address portion of a website, what prefix indicates your \ncommunications are being encrypted during transit',
                          font=font_large, bg='light yellow')
-    q4A = tk.Button(frame4, text='A. Http://', font=font_large, bg='#FCF6B1', command=q4Wrong)
-    q4B = tk.Button(frame4, text='B. Https://', font=font_large, bg='#FCF6B1', command=q4Right)
-    q4C = tk.Button(frame4, text='C. Ftp://', font=font_large, bg='#FCF6B1', command=q4Wrong)
-    q4D = tk.Button(frame4, text='D. Tcp://', font=font_large, bg='#FCF6B1', command=q4Wrong)
+
+    def q4():
+        q4A['state'] = tk.DISABLED
+        q4B['state'] = tk.DISABLED
+        q4C['state'] = tk.DISABLED
+        q4D['state'] = tk.DISABLED
+
+    q4A = tk.Button(frame4, text='A. Http://', font=font_large, bg='#FCF6B1', command=lambda: [q4Wrong(), q4()])
+    q4B = tk.Button(frame4, text='B. Https://', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q4Right(), correct_button_clicked(), q4()])
+    q4C = tk.Button(frame4, text='C. Ftp://', font=font_large, bg='#FCF6B1', command=lambda: [q4Wrong(), q4()])
+    q4D = tk.Button(frame4, text='D. Tcp://', font=font_large, bg='#FCF6B1', command=lambda: [q4Wrong(), q4()])
 
     question4.pack(pady=20)
     q4A.place(x=120, y=150)
@@ -412,11 +492,21 @@ def startquiz():
 
     question5 = tk.Label(frame5, text='How does identity theft cause problems for online users?', font=font_large,
                          bg='light yellow')
-    q5A = tk.Button(frame5, text='A. Steals social security', font=font_large, bg='#FCF6B1', command=q5Wrong)
+
+    def q5():
+        q5A['state'] = tk.DISABLED
+        q5B['state'] = tk.DISABLED
+        q5C['state'] = tk.DISABLED
+        q5D['state'] = tk.DISABLED
+
+    q5A = tk.Button(frame5, text='A. Steals social security', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q5Wrong(), q5()])
     q5B = tk.Button(frame5, text='B. Locates where you live and all information', font=font_large, bg='#FCF6B1',
-                    command=q5Wrong)
-    q5C = tk.Button(frame5, text='C. Steals bank information', font=font_large, bg='#FCF6B1', command=q5Wrong)
-    q5D = tk.Button(frame5, text='D. All of the above', font=font_large, bg='#FCF6B1', command=q5Right)
+                    command=lambda: [q5Wrong(), q5()])
+    q5C = tk.Button(frame5, text='C. Steals bank information', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q5Wrong(), q5()])
+    q5D = tk.Button(frame5, text='D. All of the above', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q5Right(), correct_button_clicked(), q5()])
 
     question5.pack(pady=20)
     q5A.pack(pady=20)
@@ -432,15 +522,23 @@ def startquiz():
 
     question6 = tk.Label(frame6, text='What would you not do if you know your computer \nis suspect by malware?',
                          font=font_large, bg='light yellow')
+
+    def q6():
+        q6A['state'] = tk.DISABLED
+        q6B['state'] = tk.DISABLED
+        q6C['state'] = tk.DISABLED
+        q6D['state'] = tk.DISABLED
+
     q6A = tk.Button(frame6,
                     text='A. Stop doing any online activity that requires your \nusername, password, and other personal information.',
-                    font=font_large, bg='#FCF6B1', command=q6Wrong)
+                    font=font_large, bg='#FCF6B1', command=lambda: [q6Wrong(), q6()])
     q6B = tk.Button(frame6, text='B. Keep shopping, banking, using every account \nabout online activity.',
-                    font=font_large, bg='#FCF6B1', command=q6Right)
+                    font=font_large, bg='#FCF6B1', command=lambda: [q6Right(), correct_button_clicked(), q6()])
     q6C = tk.Button(frame6,
                     text='C.Try to use anti-virus and anti-spyware software, \nand a firewall to defend the malware',
-                    font=font_large, bg='#FCF6B1', command=q6Wrong)
-    q6D = tk.Button(frame6, text='D. Try to call a professional help', font=font_large, bg='#FCF6B1', command=q6Wrong)
+                    font=font_large, bg='#FCF6B1', command=lambda: [q6Wrong(), q6()])
+    q6D = tk.Button(frame6, text='D. Try to call a professional help', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q6Wrong(), q6()])
 
     question6.pack(pady=20)
     q6A.pack(pady=20)
@@ -454,14 +552,23 @@ def startquiz():
     btnBackQ5 = tk.Button(frame6, font=font_small, text='BACK', bg='#FCF6B1', command=back_to_Q5)
     btnBackQ5.place(x=50, y=500)
 
+    def q7():
+        q7A['state'] = tk.DISABLED
+        q7B['state'] = tk.DISABLED
+        q7C['state'] = tk.DISABLED
+        q7D['state'] = tk.DISABLED
+
     question7 = tk.Label(frame7,
                          text='The mouse on your computer screen starts to move \naround on its own and click on things on \nyour desktop. What do you do?',
                          font=font_large, bg='light yellow')
     q7A = tk.Button(frame7, text='A. Disconnect your computer from the network', font=font_large, bg='#FCF6B1',
-                    command=q7Right)
-    q7B = tk.Button(frame7, text='B. Unplug your mouse', font=font_large, bg='#FCF6B1', command=q7Wrong)
-    q7C = tk.Button(frame7, text='C. Turn your computer off', font=font_large, bg='#FCF6B1', command=q7Wrong)
-    q7D = tk.Button(frame7, text='D. Don’t do anything', font=font_large, bg='#FCF6B1', command=q7Wrong)
+                    command=lambda: [q7Right(), correct_button_clicked(), q7()])
+    q7B = tk.Button(frame7, text='B. Unplug your mouse', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q7Wrong(), q7()])
+    q7C = tk.Button(frame7, text='C. Turn your computer off', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q7Wrong(), q7()])
+    q7D = tk.Button(frame7, text='D. Don’t do anything', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q7Wrong(), q7()])
 
     question7.pack(pady=20)
     q7A.pack(pady=20)
@@ -478,10 +585,18 @@ def startquiz():
     question8 = tk.Label(frame8,
                          text='It is a type of malicious software that disguises \nitself as a legitimate file or program',
                          font=font_large, bg='light yellow')
-    q8A = tk.Button(frame8, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q8Right)
-    q8B = tk.Button(frame8, text='B. Worms', font=font_large, bg='#FCF6B1', command=q8Wrong)
-    q8C = tk.Button(frame8, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q8Wrong)
-    q8D = tk.Button(frame8, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q8Wrong)
+
+    def q8():
+        q8A['state'] = tk.DISABLED
+        q8B['state'] = tk.DISABLED
+        q8C['state'] = tk.DISABLED
+        q8D['state'] = tk.DISABLED
+
+    q8A = tk.Button(frame8, text='A. Trojan Horse', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q8Right(), correct_button_clicked(), q8()])
+    q8B = tk.Button(frame8, text='B. Worms', font=font_large, bg='#FCF6B1', command=lambda: [q8Wrong(), q8()])
+    q8C = tk.Button(frame8, text='C. Spyware', font=font_large, bg='#FCF6B1', command=lambda: [q8Wrong(), q8()])
+    q8D = tk.Button(frame8, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=lambda: [q8Wrong(), q8()])
 
     question8.pack(pady=20)
     q8A.place(x=80, y=180)
@@ -498,10 +613,18 @@ def startquiz():
     question9 = tk.Label(frame9,
                          text='It is a type of malware that restricts access to your \nown files. Often, payment is required \nfor the access to be returned',
                          font=font_large, bg='light yellow')
-    q9A = tk.Button(frame9, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q9Wrong)
-    q9B = tk.Button(frame9, text='B. Worms', font=font_large, bg='#FCF6B1', command=q9Wrong)
-    q9C = tk.Button(frame9, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q9Wrong)
-    q9D = tk.Button(frame9, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q9Right)
+
+    def q9():
+        q9A['state'] = tk.DISABLED
+        q9B['state'] = tk.DISABLED
+        q9C['state'] = tk.DISABLED
+        q9D['state'] = tk.DISABLED
+
+    q9A = tk.Button(frame9, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=lambda: [q9Wrong(), q9()])
+    q9B = tk.Button(frame9, text='B. Worms', font=font_large, bg='#FCF6B1', command=lambda: [q9Wrong(), q9()])
+    q9C = tk.Button(frame9, text='C. Spyware', font=font_large, bg='#FCF6B1', command=lambda: [q9Wrong(), q9()])
+    q9D = tk.Button(frame9, text='D. Ransomware', font=font_large, bg='#FCF6B1',
+                    command=lambda: [q9Right(), correct_button_clicked(), q9()])
 
     question9.pack(pady=20)
     q9A.place(x=80, y=180)
@@ -517,18 +640,26 @@ def startquiz():
 
     question10 = tk.Label(frame10, text='Which of the following is an example of a “phishing” attack?', font=font_large,
                           bg='light yellow')
+
+    def q10():
+        q10A['state'] = tk.DISABLED
+        q10B['state'] = tk.DISABLED
+        q10C['state'] = tk.DISABLED
+        q10D['state'] = tk.DISABLED
+
     q10A = tk.Button(frame10,
                      text='A. Sending someone an email that contains a malicious link \nthat is disguised to look like '
                           'an email from \nsomeone the person knows',
-                     font=14, bg='#FCF6B1', command=q10Wrong)
+                     font=font_small, bg='#FCF6B1', command=lambda: [q10Wrong(), q10()])
     q10B = tk.Button(frame10,
                      text='B. Creating a fake website that looks nearly identical \nto a real website in order to trick users \ninto entering their login information',
-                     font=14, bg='#FCF6B1', command=q10Wrong)
+                     font=font_small, bg='#FCF6B1', command=lambda: [q10Wrong(), q10()])
     q10C = tk.Button(frame10,
                      text='C. Sending someone a text message that contains a \nmalicious link that is disguised to look like a notification '
                           '\nthat the person has won a contest',
-                     font=14, bg='#FCF6B1', command=q10Wrong)
-    q10D = tk.Button(frame10, text='D. All of the above', font=14, bg='#FCF6B1', command=q10Right)
+                     font=font_small, bg='#FCF6B1', command=lambda: [q10Wrong(), q10()])
+    q10D = tk.Button(frame10, text='D. All of the above', font=font_small, bg='#FCF6B1',
+                     command=lambda: [q10Right(), correct_button_clicked(), q10()])
 
     question10.pack(pady=20)
     q10A.pack(pady=15)
@@ -544,10 +675,18 @@ def startquiz():
 
     question11 = tk.Label(frame11, text='Which of the following four passwords is the most secure?', font=font_large,
                           bg='light yellow')
-    q11A = tk.Button(frame11, text='A. WTh!5Z', font=font_large, bg='#FCF6B1', command=q11Right)
-    q11B = tk.Button(frame11, text='B. 123456', font=font_large, bg='#FCF6B1', command=q11Wrong)
-    q11C = tk.Button(frame11, text='C. into*48', font=font_large, bg='#FCF6B1', command=q11Wrong)
-    q11D = tk.Button(frame11, text='D. Ball123', font=font_large, bg='#FCF6B1', command=q11Wrong)
+
+    def q11():
+        q11A['state'] = tk.DISABLED
+        q11B['state'] = tk.DISABLED
+        q11C['state'] = tk.DISABLED
+        q11D['state'] = tk.DISABLED
+
+    q11A = tk.Button(frame11, text='A. WTh!5Z', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q11Right(), correct_button_clicked(), q11()])
+    q11B = tk.Button(frame11, text='B. 123456', font=font_large, bg='#FCF6B1', command=lambda: [q11Wrong(), q11()])
+    q11C = tk.Button(frame11, text='C. into*48', font=font_large, bg='#FCF6B1', command=lambda: [q11Wrong(), q11()])
+    q11D = tk.Button(frame11, text='D. Ball123', font=font_large, bg='#FCF6B1', command=lambda: [q11Wrong(), q11()])
 
     question11.pack(pady=20)
     q11A.place(x=120, y=150)
@@ -564,11 +703,20 @@ def startquiz():
     question12 = tk.Label(frame12, text='What kind of cybersecurity risks can be minimized by '
                                         '\nusing a Virtual Private Network (VPN)?',
                           font=font_large, bg='light yellow')
-    q12A = tk.Button(frame12, text='A. Use of insecure Wi-Fi networks', font=font_large, bg='#FCF6B1', command=q12Right)
-    q12B = tk.Button(frame12, text='B. De-anonymization by network operatorss', font=font_large, bg='#FCF6B1',
-                     command=q12Wrong)
-    q12C = tk.Button(frame12, text='C. Key-logging', font=font_large, bg='#FCF6B1', command=q12Wrong)
-    q12D = tk.Button(frame12, text='D. Phishing attacks', font=font_large, bg='#FCF6B1', command=q12Wrong)
+
+    def q12():
+        q12A['state'] = tk.DISABLED
+        q12B['state'] = tk.DISABLED
+        q12C['state'] = tk.DISABLED
+        q12D['state'] = tk.DISABLED
+
+    q12A = tk.Button(frame12, text='A. Use of insecure Wi-Fi networks', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q12Right(), correct_button_clicked(), q12()])
+    q12B = tk.Button(frame12, text='B. De-anonymization by network operators', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q12Wrong(), q12()])
+    q12C = tk.Button(frame12, text='C. Key-logging', font=font_large, bg='#FCF6B1', command=lambda: [q12Wrong(), q12()])
+    q12D = tk.Button(frame12, text='D. Phishing attacks', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q12Wrong(), q12()])
 
     question12.pack(pady=20)
     q12A.pack(pady=20)
@@ -585,11 +733,21 @@ def startquiz():
     question13 = tk.Label(frame13,
                           text='On most home computers, how often should you update \nyour operating system and security software?',
                           font=font_large, bg='light yellow')
-    q13A = tk.Button(frame13, text='A. Monthly', font=font_large, bg='#FCF6B1', command=q13Right)
+
+    def q13():
+        q13A['state'] = tk.DISABLED
+        q13B['state'] = tk.DISABLED
+        q13C['state'] = tk.DISABLED
+        q13D['state'] = tk.DISABLED
+
+    q13A = tk.Button(frame13, text='A. Monthly', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q13Right(), correct_button_clicked(), q13()])
     q13B = tk.Button(frame13, text='B. You do not need to update your system', font=font_large, bg='#FCF6B1',
-                     command=q13Wrong)
-    q13C = tk.Button(frame13, text='C. Three times a week', font=font_large, bg='#FCF6B1', command=q13Wrong)
-    q13D = tk.Button(frame13, text='D. At least once a week', font=font_large, bg='#FCF6B1', command=q13Wrong)
+                     command=lambda: [q13Wrong(), q13()])
+    q13C = tk.Button(frame13, text='C. Three times a week', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q13Wrong(), q13()])
+    q13D = tk.Button(frame13, text='D. At least once a week', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q13Wrong(), q13()])
 
     question13.pack(pady=20)
     q13A.pack(pady=20)
@@ -606,10 +764,18 @@ def startquiz():
     question14 = tk.Label(frame14,
                           text=' It is a malicious software that replicate themselves \nover and over to deplete system resources',
                           font=font_large, bg='light yellow')
-    q14A = tk.Button(frame14, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=q14Wrong)
-    q14B = tk.Button(frame14, text='B. Worms', font=font_large, bg='#FCF6B1', command=q14Right)
-    q14C = tk.Button(frame14, text='C. Spyware', font=font_large, bg='#FCF6B1', command=q14Wrong)
-    q14D = tk.Button(frame14, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=q14Wrong)
+
+    def q14():
+        q14A['state'] = tk.DISABLED
+        q14B['state'] = tk.DISABLED
+        q14C['state'] = tk.DISABLED
+        q14D['state'] = tk.DISABLED
+
+    q14A = tk.Button(frame14, text='A. Trojan Horse', font=font_large, bg='#FCF6B1', command=lambda: [q14Wrong, q14()])
+    q14B = tk.Button(frame14, text='B. Worms', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q14Right(), correct_button_clicked(), q14()])
+    q14C = tk.Button(frame14, text='C. Spyware', font=font_large, bg='#FCF6B1', command=lambda: [q14Wrong, q14()])
+    q14D = tk.Button(frame14, text='D. Ransomware', font=font_large, bg='#FCF6B1', command=lambda: [q14Wrong, q14()])
 
     question14.pack(pady=20)
     q14A.place(x=80, y=180)
@@ -625,13 +791,21 @@ def startquiz():
 
     question15 = tk.Label(frame15, text=' How can you tell if a website encrypts its traffic?', font=font_large,
                           bg='light yellow')
-    q15A = tk.Button(frame15, text='A. Google it', font=font_large, bg='#FCF6B1', command=q15Wrong)
+
+    def q15():
+        q15A['state'] = tk.DISABLED
+        q15B['state'] = tk.DISABLED
+        q15C['state'] = tk.DISABLED
+        q15D['state'] = tk.DISABLED
+
+    q15A = tk.Button(frame15, text='A. Google it', font=font_large, bg='#FCF6B1',
+                     command=lambda: [q15Wrong(), to_score(), q15()])
     q15B = tk.Button(frame15, text='B. Look for the lock symbol in a URL', font=font_large, bg='#FCF6B1',
-                     command=q15Right)
+                     command=lambda: [q15Right(), correct_button_clicked(), to_score()])
     q15C = tk.Button(frame15, text='C. All websites encrypt their traffic', font=font_large, bg='#FCF6B1',
-                     command=q15Wrong)
+                     command=lambda: [q15Wrong(), to_score(), q15()])
     q15D = tk.Button(frame15, text='D. Encrypted sites take longer to load', font=font_large, bg='#FCF6B1',
-                     command=q15Wrong)
+                     command=lambda: [q15Wrong(), to_score(), q15()])
 
     question15.pack(pady=20)
     q15A.pack(pady=20)
