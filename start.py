@@ -366,9 +366,6 @@ def scoreboard():
                         fg="#ffffff", width=20, font=("Impact", 30))
         lblfail.place(x=350, y=400, anchor="s")
 
-    tryagain = Button(text="TRY AGAIN", font=font_large)
-    tryagain.place(x=690, y=500, anchor="se")
-
     def proginfo():
         prog = Label(root,
                      text="People behind the program:\n \n Ann Vergie Adecer\nPatricia Andy Aquino\nMa. Carmela Bolante\nJonalee Lorie Naife\n Angelique Grace Quiñones",
